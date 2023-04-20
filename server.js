@@ -14,6 +14,10 @@ const io = new Server(server, {
   },
 });
 
+app.get("/", (req, res) => {
+  res.send("hello");
+});
+
 let users = [];
 const onConnected = (socket) => {
   users = [...users, socket.id];
